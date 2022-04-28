@@ -7,12 +7,22 @@ const {
   writeline // escreve um valor com quebra de linha
 } = require('learning-console')
 
-const int1 = readInt('escreva um numero:')
+const n1 = readInt('informe o primeiro numero:')
 
-const int2 = readInt('escreva outro numero:')
+const n2 = readInt('informe o segundo numero:')
 
-if (int1 < int2) {
-  writeline('os numeros sao: ' + int2 + int1)
-} else {
-  write('os numeros sao: ' + int1 + ',' + int2)
+const n3 = readInt('informe o terceiro numero:')
+
+if (n3 < n2 && n2 < n1) {
+  writeline('os numeros sao: ' + n3 + ' ' + n2 + ' ' + n1)
+} else if (n2 < n1 && n1 < n3) {
+  writeline('os numeros sao: ' + n2 + ' ' + n1 + ' ' + n3)
+} else if (n3 < n1 && n1 < n2) {
+  writeline('os numeros sao: ' + n3 + ' ' + n1 + ' ' + n2)
+} else if (n2 < n3 && n3 < n1) {
+  writeline('os numeros sao: ' + n2 + ' ' + n3 + ' ' + n1)
+} else if (n1 < n3 && n3 < n2) {
+  writeline('os numeros sao: ' + n1 + ' ' + n3 + ' ' + n2)
+} else if (n1 < n2 && n2 < n3) {
+  writeline('os numeros sao: ' + n1 + ' ' + n2 + ' ' + n3)
 }

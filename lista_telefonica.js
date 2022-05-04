@@ -6,13 +6,22 @@ const {
   write, // escreve um valor sem quebra de linha
   writeline // escreve um valor com quebra de linha
 } = require('learning-console')
-let cont = 1
-let num = readInt('escreva um numero maior que um:')
-while (cont <= num) {
-  if (cont % 3 === 0) {
-    writeline(cont + '!')
-  } else {
-    writeline(cont)
-  }
+
+let nome = []
+let numero = []
+let opcao = 's'
+let cont = 0
+let limite = 0
+while (opcao === 's') {
+  nome[cont] = read('informe o nome do contato:')
+  numero[cont] = readInt('informe o numero do contato:')
+  opcao = read('deseja adicionar mais um contato?')
+  cont += 1
+}
+limite = cont
+cont = 0
+writeline('os contatos são:')
+while (cont < limite) {
+  writeline('- ' + nome[cont] + ', ' + numero[cont])
   cont += 1
 }

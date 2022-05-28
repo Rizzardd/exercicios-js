@@ -9,7 +9,7 @@ const {
 
 let nome = read('informe uma palavra: ')
 let cont = nome.length
-do {
-  write(nome[cont - 1])
+while (cont > 0) {
   cont--
-} while (cont > 0)
+  const resultado = write(nome[cont])
+}
